@@ -36,7 +36,7 @@ class LieferantenController extends Controller
      */
     public function show(Lieferanten $lieferanten)
     {
-        //
+        return view('order_food');
     }
 
     /**
