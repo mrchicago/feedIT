@@ -7,8 +7,19 @@
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="Max Mustermann">
             </div>
+
             <div class="mb-3">
-                <label for="preis_option_1" class="form-label">Preisoptionen</label>
+                <label for="description" class="form-label">Beschreibung (optional)</label>
+                <input type="text" class="form-control" name="description" id="description" placeholder="mit...">
+            </div>
+
+            <div class="mb-3">
+                <label for="menu_number" class="form-label">Nummer auf der Speisekarte</label>
+                <input type="text" class="form-control" name="menu_number" id="menu_number" placeholder="16">
+            </div>
+
+            <div class="mb-3">
+                <label for="preis_option_1" class="form-label">Preisoptionen in EUR</label>
 
                 <div class="row">
                     <div class="col">
@@ -28,39 +39,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="lieferant" class="form-label">Gericht</label>
-                <select class="form-select" aria-label="Gericht wählen..." @disabled($selectedLieferant == 0)  name="gericht" wire:model.live="selectedGericht">
-                    @forelse ($gerichte as $gericht)
-                        <option value="{{ $gericht->id }}">{{ $gericht->name }}</option>
-                    @empty
-                        <option value="0">Bitte Lieferant wählen!</option>
-                    @endforelse
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="lieferant" class="form-label">Bezahlmethode</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="bezahlmethode" id="bezahlmethode1">
-                    <label class="form-check-label" for="bezahlmethode1">
-                        Cash
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="bezahlmethode" id="bezahlmethode2"
-                        checked>
-                    <label class="form-check-label" for="bezahlmethode2">
-                        PayPal
-                    </label>
-                </div>
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="hey_schau_dir_den_code_nicht_an" onchange="checkIsCool()">
-                <label class="form-check-label" for="hey_schau_dir_den_code_nicht_an">Ich bin cool</label>
-                <div style="display: none;" id="hey_schau_dir_den_code_nicht_an_help" class="form-text">Lügen darf man nicht sagen...</div>
-            </div>
-            <button type="submit" class="btn btn-primary">Ja, mitbestellen</button>
+            <button type="submit" class="btn btn-primary">Erstellen</button>
         </form>
     </div>
 </div>
