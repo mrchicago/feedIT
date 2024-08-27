@@ -1,33 +1,31 @@
 <div class="card mt-5">
-    <h5 class="card-header">Mitbestellen am {{ date('d.m.Y') }}</h5>
+    <h5 class="card-header">Neues Gericht für Lieferant {{ $lieferant->name }}</h5>
     <div class="card-body">
-        <script>
-            function checkIsCool() {
-                if (document.getElementById('hey_schau_dir_den_code_nicht_an').checked) {
-                    document.getElementById('hey_schau_dir_den_code_nicht_an_help').style.display = 'block';
-                    return false;
-                } else {
-                    document.getElementById('hey_schau_dir_den_code_nicht_an_help').style.display = 'none';
-                    return true;
-                }
-            }
-        </script>
-        <form method="POST" action="{{ route('mitbestellen') }}" onsubmit="return checkIsCool()">
+        <form method="POST" action="{{ route('gericht.store') }}" onsubmit="return checkIsCool()">
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="Max Mustermann">
             </div>
             <div class="mb-3">
-                <label for="lieferant" class="form-label">Lieferant</label>
-                <select class="form-select" aria-label="Lieferant wählen..." name="lieferant" wire:model.live="selectedLieferant">
-                    <option selected>Lieferant wählen...</option>
-                    @forelse ($lieferanten as $lieferant)
-                        <option value="{{ $lieferant->id }}">{{ $lieferant->name }}</option>
-                    @empty
-                        <option value="0">Keine Lieferanten vorhanden</option>
-                    @endforelse
-                </select>
+                <label for="preis_option_1" class="form-label">Preisoptionen</label>
+
+                <div class="row">
+                    <div class="col">
+                        <h4>Klein</h4>
+                        <input type="number" class="form-control" name="preis_option_1" id="preis_option_1" placeholder="">
+                    </div>
+
+                    <div class="col">
+                        <h4>Mittel</h4>
+                        <input type="number" class="form-control" name="preis_option_2" id="preis_option_2" placeholder="">
+                    </div>
+
+                    <div class="col">
+                        <h4>Groß</h4>
+                        <input type="number" class="form-control" name="preis_option_3" id="preis_option_3" placeholder="">
+                    </div>
+                </div>
             </div>
 
             <div class="mb-3">
