@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DishController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderEntryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
 
@@ -28,8 +29,8 @@ Route::prefix('gerichte')->group(function () {
 });
 
 Route::prefix('bestellungen')->group(function () {
-    Route::get('/mitbestellen', [OrderController::class, 'index'])->name('mitbestellen');
-    Route::post('/mitbestellen', [OrderController::class, 'store'])->name('mitbestellen.store');
+    Route::get('/mitbestellen', [OrderEntryController::class, 'create'])->name('mitbestellen');
+    Route::post('/mitbestellen', [OrderEntryController::class, 'store'])->name('mitbestellen.store');
 
     Route::get('/', [OrderController::class, 'index'])->name('bestellungen');
 });
