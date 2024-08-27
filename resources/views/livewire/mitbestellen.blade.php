@@ -20,7 +20,7 @@
             </div>
             <div class="mb-3">
                 <label for="lieferant" class="form-label">Lieferant</label>
-                <select class="form-select" aria-label="Lieferant wählen...">
+                <select class="form-select" aria-label="Lieferant wählen..." wire:model.live="selectedLieferant">
                     <option selected>Lieferant wählen...</option>
                     @forelse ($lieferanten as $lieferant)
                         <option value="{{ $lieferant->id }}">{{ $lieferant->name }}</option>
@@ -32,7 +32,7 @@
 
             <div class="mb-3">
                 <label for="lieferant" class="form-label">Gericht</label>
-                <select class="form-select" aria-label="Gericht wählen..." @disabled($selectedLieferant == 0)>
+                <select class="form-select" aria-label="Gericht wählen..." @disabled($selectedLieferant == 0) wire:model.live="selectedGericht">
                     @forelse ($gerichte as $gericht)
                         <option value="{{ $gericht->id }}">{{ $gericht->name }}</option>
                     @empty

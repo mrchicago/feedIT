@@ -26,7 +26,7 @@ class Mitbestellen extends Component
     {
 
         if ($this->selectedLieferant) {
-            $this->gerichte = Dish::where('lieferant_id', $this->selectedLieferant)->get();
+            $this->gerichte = Dish::where('supplier_id', $this->selectedLieferant)->get();
         } else {
             $this->gerichte = Collect([]);
         }
