@@ -23,18 +23,33 @@
 
                 <div class="row">
                     <div class="col">
-                        <h4>Klein</h4>
-                        <input type="number" class="form-control" name="preis_option_1" id="preis_option_1" placeholder="">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Klein</h4>
+                                <input type="number" class="form-control" name="preis_option_1" id="preis_option_1"
+                                    placeholder="">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col">
-                        <h4>Mittel</h4>
-                        <input type="number" class="form-control" name="preis_option_2" id="preis_option_2" placeholder="">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Mittel</h4>
+                                <input type="number" class="form-control" name="preis_option_2" id="preis_option_2"
+                                    placeholder="">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col">
-                        <h4>Groß</h4>
-                        <input type="number" class="form-control" name="preis_option_3" id="preis_option_3" placeholder="">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Groß</h4>
+                                <input type="number" class="form-control" name="preis_option_3" id="preis_option_3"
+                                    placeholder="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
