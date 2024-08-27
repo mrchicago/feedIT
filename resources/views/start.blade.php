@@ -25,11 +25,11 @@
 
                 <tbody>
                     <tr>
-                        <td>Begrüßungsmonitore Norden</td>
-                        <td>3</td>
-                        <td>Standard Begrüßung</td>
+                        <td>27.08.2024</td>
+                        <td>Memet</td>
+                        <td>5</td>
                         <td class="actions-cell">
-                            <a href="#" class="btn btn-primary btn-sm">Mitbestellen</a>
+                            <a href="{{ route('mitbestellen') }}?lieferant=1" class="btn btn-primary btn-sm">Mitbestellen</a>
                         </td>
                     </tr>
                 </tbody>

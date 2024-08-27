@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
 
 Route::get('/', function () {
-    return view('start  ');
+    return view('start');
 })->name('start');
 
 Route::prefix('lieferanten')->group(function () {

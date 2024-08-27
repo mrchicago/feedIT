@@ -2,7 +2,8 @@
 
 namespace App\Livewire;
 
-use App\Models\Lieferanten;
+use App\Models\Dish;
+use App\Models\Supplier;
 use Livewire\Component;
 
 class Mitbestellen extends Component
@@ -13,15 +14,19 @@ class Mitbestellen extends Component
 
     public function mount()
     {
-        // $this->lieferanten = Lieferanten::all();
+        $this->lieferanten = Supplier::all();
         $this->lieferanten = Collect([]);
+
+        if(request()->has('lieferant')) {
+            $this->selectedLieferant = request('lieferant');
+        }
     }
 
     public function render()
     {
 
         if ($this->selectedLieferant) {
-            $this->gerichte = Gerichte::where('lieferant_id', $this->selectedLieferant)->get();
+            $this->gerichte = Dish::where('lieferant_id', $this->selectedLieferant)->get();
         } else {
             $this->gerichte = Collect([]);
         }
