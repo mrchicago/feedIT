@@ -45,14 +45,14 @@
                 <label for="lieferant" class="form-label">Bezahlmethode</label>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="bezahlmethode" id="bezahlmethode1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <label class="form-check-label" for="bezahlmethode1">
                         Cash
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="bezahlmethode" id="bezahlmethode2"
                         checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <label class="form-check-label" for="bezahlmethode2">
                         PayPal
                     </label>
                 </div>

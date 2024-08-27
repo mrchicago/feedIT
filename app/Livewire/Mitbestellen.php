@@ -13,7 +13,8 @@ class Mitbestellen extends Component
 
     public function mount()
     {
-        $this->lieferanten = Lieferanten::all();
+        // $this->lieferanten = Lieferanten::all();
+        $this->lieferanten = Collect([]);
     }
 
     public function render()

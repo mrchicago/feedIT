@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Lieferanten;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
-class LieferantenController extends Controller
+class SupplierController extends Controller
 {
     /**
      * Display a listing of the resource.
