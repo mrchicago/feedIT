@@ -6,7 +6,7 @@
         <div class="card-body">
             <h5 class="card-title">Bestelltag {{ date('d.m.Y') }}</h5>
             <p class="card-text">Fein lecker Pizza oder so</p>
-            <a href="/mitbestellen" class="btn btn-primary">Jetzt mitbestellen</a>
+            <a href="{{ route('mitbestellen') }}" class="btn btn-primary">Jetzt mitbestellen</a>
         </div>
     </div>
 
